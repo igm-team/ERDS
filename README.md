@@ -10,4 +10,4 @@ Brett Trost and Joe Whitney (The Centre for Applied Genomics, Hospital for Sick 
 
 If you use ERDS for publication, please cite:
 
-Zhu, Mingfu, et al. "Using ERDS to infer copy-number variants in high-coverage genomes." The American Journal of Human Genetics 91.3 (2012): 408-421.
+Zhu M, Need AC, Han Y, Ge D, Maia JM, Zhu Q, Heinzen EL, Cirulli ET, Pelak K, He M, Ruzzo EK, Gumbs CE, Singh A, Feng S, Shianna KV and Goldstein DB. Using ERDS to Infer Copy-Number Variants in High-Coverage Genomes. The American Journal of Human Genetics. Volume 91, Issue 3, 7 September 2012, Pages 408-421.
