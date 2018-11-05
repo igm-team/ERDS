@@ -4,7 +4,7 @@ ERDS is designed for detection of copy number variants (CNVs) on human genomes f
 
 The original version can be found from subdirectory named "original".
 
-Brett Trost improved memory usage and performance of ERDS and his team published a paper in AJHG describing a workflow for detecting CNVs from WGS data. The modifed code version can be found from subdirectory named "tcag". A simple compilation step is required - just run "make" within the "src" directory.
+Brett Trost and Joe Whitney (The Centre for Applied Genomics, Hospital for Sick Children, Toronto) improved memory usage and performance of ERDS and their team published a paper describing a workflow for detecting CNVs from WGS data (The American Journal of Human Genetics 102.1 (2018): 142-155). The modifed code version can be found from subdirectory named "tcag". A simple compilation step is required - just run "make" within the "src" directory.
 
 ### Citation
 
