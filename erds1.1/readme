@@ -45,6 +45,3 @@ perl /home/mz34/erds1.1/erds_pipeline.pl -b /nfs/seqsata06/ALIGNMENT/BUILD37/GEN
 
 3. Citing ERDS
 Zhu M, Need AC, Han Y, Ge D, Maia JM, Zhu Q, Heinzen EL, Cirulli ET, Pelak K, He M, Ruzzo EK, Gumbs CE, Singh A, Feng S, Shianna KV and Goldstein DB. Using ERDS to Infer Copy-Number Variants in High-Coverage Genomes. The American Journal of Human Genetics. Volume 91, Issue 3, 7 September 2012, Pages 408-421.
-
-For more information, please visit
-IGM website
