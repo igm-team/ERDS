@@ -1,0 +1,50 @@
+ERDS
+#Author: Mingfu Zhu, mingfu.zhu@duke.edu
+#Version 1.1
+
+1. Installation.
+The hmm packages were written in C and require compilation. Go to both erds1.1/hmm and erds1.1/phmm directories and type:
+make
+
+2. Usage.
+The usage of ERDS is pretty straightforward as long as you input correct files and set up correct parameters. There is no particular order of input.
+For help, type 
+perl erds_pipeline.pl
+
+perl $ERDS_dir/erds_pipeline.pl -b $bam_file -v $snps_indels_file -o $output_dir -r $ref_file OPTIONS
+Below is an example when I ran ERDS in sample na12878chgv.
+perl /home/mz34/erds1.1/erds_pipeline.pl -b /nfs/seqsata06/ALIGNMENT/BUILD37/GENOME/na12878chgv/combined/na12878chgv_final.bam -v /nfs/seqsata06/ALIGNMENT/BUILD37/GENOME/na12878chgv/combined/na12878chgv.recalSNPs.vcf -o /nfs/seqsata07/Mingfu/na12878chgv -r /nfs/goldsteindata/refDB/HS_Build37/BWA_INDEX_hs37d5/hs37d5.fa
+
+	#You must define the following parameters.
+	-o: followed by the path of output directory.(-o output_dir)
+	-b: followed by specified bam_file. (-b bam_file)
+	-v: followed by specified variant_file file called by SNV calling tools. (-v variant_file)
+	-r: followed by specified reference file. (-r reference_fasta_file)
+	
+	#You can optionally define the following parameters.
+	--cluster or -c: if indicated, run cluster. By default single cpu. (-c)
+	--samtools: followed by the specified samtools. By default attached 1.12. (--samtools path_to_samtools)
+	--sd: followed by the SD version of b36, b37 or empty. By default empty.(--sd b36|b37|empty)
+	--exp_pct or -p: followed by expected percentage of deletions or duplications. By default 0.0025.(-p value)
+	--name: followed by the string of the sample name.(-name sample_name)
+	
+	#The following parameters are for advanced users only. You can optionally define them only if you are sure.
+	--parameter: followed by specified parameter file. (--parameter parameter_file)
+	--del: followed by specified win_size_del. By default 200. (--del win_size_del)
+	--dup: followed by specified win_size_dup. By default 1000. (--dup win_size_dup)
+	--large: followed by specified length (in bp). Deletions larger than this value will escape from PEM check. By default 50000.(--large integer)
+	--pem: followed by specified value for PEM support required. By default 1. (--pem integer)
+	--small: followed by specified length (in bp). Deletions smaller than this value will require more PEM support (\$pem+1). By default 1000. (--small integer)
+	--scan: followed by specified value for low RD ratio scan. By default 1.4. (--scan value)
+	--pairs: followed by specified value for PEM support required for low_pem_pairs. By default 3. (--pairs integer)
+	--clip: followed by specified value for clip_spt_pem. By default 2. (--clip integer)
+	--soft: followed by specified length for softclip_check. By default 1000. (--soft integer)
+	--num_stdd: followed by specified number. Mapping distance larger than mean library size plus \$num_stdd*\$std_dev is regarded as discordant. By default 4. (--num_stdd integer)
+	--begin: followed by the step to run. Use for control the program during debuging or rerun. By default 0. (--begin integer) 
+	--end: followed by the step to stop. By default 10. (--end integer)
+
+3. Citing ERDS
+Zhu M, Need AC, Han Y, Ge D, Maia JM, Zhu Q, Heinzen EL, Cirulli ET, Pelak K, He M, Ruzzo EK, Gumbs CE, Singh A, Feng S, Shianna KV and Goldstein DB. Using ERDS to Infer Copy-Number Variants in High-Coverage Genomes. The American Journal of Human Genetics. Volume 91, Issue 3, 7 September 2012, Pages 408-421.
+
+For more information, please visit
+http://www.duke.edu/~mz34/erds.htm
