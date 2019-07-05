@@ -35,9 +35,9 @@ for my $i (0..$#partitions) {
 	} else {
 		foreach my $chr (@{$partitions[$i]}) {
 			my $time = localtime;
-			print "[$time] PID $$ is performing computation for chr$chr\n";
+			print "[$time] PID $$ is performing computation for $chr\n";
 			system("perl $script_dir/rd_bam.pl $parameter_sample $functions '$chr' > '$sample_dir/debug/rd_bam_chr$chr.txt' 2> '$sample_dir/debug/rd_bam_chr$chr.err'");
-			print "Error code for chr$chr is $?\n";
+			print "Error code for $chr is $?\n" if $? != 0;
 		}
 		exit;
 	}
