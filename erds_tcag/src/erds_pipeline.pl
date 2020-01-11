@@ -57,8 +57,8 @@ GetOptions(
 	'sd=s' => \$sd, #--sd: followed by the SD version of b36, b37 or empty. By default empty. (--sd b36|b37|empty)
 	'exp_pct|p=s' => \$exp_pct, #--exp_pct or -p: followed by expected percentage of deletions or duplications. By default 0.0025. (-p value)
 	'n=s' => \$samplename, #--name: followed by the string of the sample name. (--name sample_name)
-	'z=i' => \$num_processors, #-z: the number of processors available to ERDS. Will be used to parallelize step 0 of the pipeline.
-	'y' => \$fixed_rand,
+	'z=i' => \$num_processors, #-z: the number of processors available to ERDS. Will be used to parallelize some steps of the pipeline.
+	'y' => \$fixed_rand, # If specified, use a fixed random seed for selecting the genomic regions for paramterization. Useful for debugging purposes, since if you specify this, you should get the same output every time ERDS is run (given identical input)
 
 	#The following parameters are for advanced users only. You can optionally define them only if you are sure.
 	'parameter=s' => \$parameter, #--parameter: followed by specified parameter file. (--parameter parameter_file)
@@ -474,6 +474,8 @@ perl /home/mz34/erds1.1/erds_pipeline.pl -b /nfs/seqsata06/ALIGNMENT/BUILD37/GEN
 	--sd: followed by the SD version of b36, b37 or empty. By default empty.(--sd b36|b37|empty)
 	--exp_pct or -p: followed by expected percentage of deletions or duplications. By default 0.0025.(-p value)
 	--name: followed by the string of the sample name.(-name sample_name)
+	-z: the number of processors available to ERDS. Will be used to parallelize some steps of the pipeline.
+	-y: if specified, use a fixed random seed for selecting the genomic regions for paramterization. Useful for debugging purposes, since if you specify this, you should get the same output every time ERDS is run (given identical input) 
 
 	#The following parameters are for advanced users only. You can optionally define them only if you are sure.
 	--parameter: followed by specified parameter file. (--parameter parameter_file)

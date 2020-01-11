@@ -6,7 +6,7 @@ The original version can be found from subdirectory named "erds1.1".
 
 Brett Trost and Joe Whitney (The Centre for Applied Genomics (TCAG), Hospital for Sick Children, Toronto) improved memory usage and performance of ERDS and their team published a paper describing a workflow for detecting CNVs from WGS data (The American Journal of Human Genetics 102.1 (2018): 142-155). The modifed code version can be found from subdirectory named "erds_tcag". A simple compilation step is required - just run "make" within the "src" directory.
 
-In addition to memory and peformance improvements, the TCAG version of ERDS also contains a modification that affects the output of ERDS when the median insert size of the DNA library is small. Please see the above paper (specifically Figure S22 in the supplementary materials) for further details.
+In addition to memory and peformance improvements, the TCAG version of ERDS also contains a modification that affects the output of ERDS when the median insert size of the DNA library is small. Please see the above paper (specifically Figure S22 in the supplementary materials) for further details. Please note that for the TCAG version of ERDS, you must add the directory containing samtools to your PATH environment variable.
 
 ### Citation
 
