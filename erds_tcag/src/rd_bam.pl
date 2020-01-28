@@ -15,7 +15,7 @@ my $chr_sd_single="$sd_dir/$chr.single.sd";
 my $chr_sd_rc="$rc_dir/$chr.sd.rc";
 my $chr_pem_sam="$rc_dir/$chr.pem.sam";
 my $chr_pem_bam="$rc_dir/$chr.pem.bam";
-my $SAMTOOLS_EXTRA_FLAGS = "-F 2048";
+my $SAMTOOLS_EXTRA_FLAGS = "-F 256";
 
 my ($row, $pos, $CIAGR, $alg_length, $ins_read, $mq, $bq);
 my (@rc, @mq, @rd_bp);

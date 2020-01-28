@@ -26,7 +26,7 @@ my $sd="empty";
 my $num_stdd=4;
 my $num_processors=4;
 my @para;
-my $SAMTOOLS_EXTRA_FLAGS = "-F 2048";
+my $SAMTOOLS_EXTRA_FLAGS = "-F 256";
 my $fixed_rand = 0;
 
 

@@ -14,7 +14,7 @@ $num_state++;
 my $dist_thh=($ins_pem-2*$read_length)/2;
 my $inser_half=int($ins_pem/2+0.5);
 
-my $SAMTOOLS_EXTRA_FLAGS = "-F 2048";
+my $SAMTOOLS_EXTRA_FLAGS = "-F 256";
 
 ##input and directory setup
 ##################################################
