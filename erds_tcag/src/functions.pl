@@ -202,15 +202,7 @@ sub sortfile {
 	print T join ("\n",@sin);
 	print T "\n";
 	close(T);
-	my $diff=open(DIFF, "diff $file_tobe_sort $temp |");
-	$in=<DIFF>;
-	if(defined($in)){
-		system("rm $file_tobe_sort");
-		system("mv $temp $file_tobe_sort");		
-	}
-	else{
-		system("rm $temp");
-	}
+	system("mv $temp $file_tobe_sort");		
 }
 
 sub mergefile { 
@@ -293,15 +285,7 @@ sub mergefile {
 		print T "$rows[$j]";
 	}
 	close(T);
-	my $diff=open(DIFF, "diff $file_tobe_merge $temp |");
-	$in=<DIFF>;
-	if(defined($in)){
-		system("rm $file_tobe_merge");
-		system("mv $temp $file_tobe_merge");		
-	}
-	else{
-		system("rm $temp");
-	}
+	system("mv $temp $file_tobe_merge");		
 }
 
 1
