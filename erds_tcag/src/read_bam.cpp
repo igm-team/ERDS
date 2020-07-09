@@ -48,7 +48,7 @@ double midhalf(vector<int>* v) { // sub midhalf{
 	long int sum = 0; // my $sum;
 	vector<int>* array = v;
 	sort(array->begin(), array->end()); // my @sarray = sort { $a <=> $b } @array;
-	int upper = count * 0.75 + 0.5;
+	int upper = min(count - 1, (int) (count * 0.75 + 0.5));
 	int bottom = count * 0.25 + 0.5;
 	for (int i = bottom; i <= upper; i++) { // for(my $i=$bottom; $i<=$upper; $i++){
 		sum += array->at(i); // $sum+=$sarray[$i];
